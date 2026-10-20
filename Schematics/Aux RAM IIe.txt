@@ -1,0 +1,146 @@
+
+Here is the pinout of the IIe auxiliary slot, transcribed from the 1985
+edition of the IIe Technical Reference, sorted into numeric order.
+
+Note that the diagram in the IIe Technical Reference has the pin
+numbering laid out in an arbitrary order, grouping pins by function
+rather than in strict numeric order.  I assume that the physical pin
+numbering is in the same order as for the standard slots.
+
+ 1      3.58M
+ 2      VID7M
+ 3      SYNC'
+ 4      PRAS'
+ 5      VC
+ 6      C07X'
+ 7      WNDW'
+ 8      SEGA
+ 9      RA7
+10      RA1
+11      ROMEN1
+12      ROMEN2
+13      RA4
+14      RA5
+15      VID7
+16      MD7
+17      MD6
+18      VID6
+19      VID5
+20      MD5
+21      MD4
+22      VID4
+23      PHI0
+24      CLRGAT'
+25      80VID'
+26      EN80'
+27      ALTVID'
+28      SEROUT'
+29      ENVID'
+30      +5V
+31      GND
+32      14M
+33      PCAS'
+34      LDPS'
+35      R/W80
+36      PHI1
+37      CASEN'
+38      VID3
+39      MD3
+40      MD2
+41      VID2
+42      VID1
+43      MD1
+44      MD0
+45      VID0
+46      RA6
+47      H0
+48      RA3
+49      RA2
+50      AN3
+51      RA0
+52      R/W'
+53      Q3
+54      SEGB
+55      FRCTXT'
+56      RA9'
+57      RA10'
+58      GR
+59      7M
+60      ENTMG'
+
+Here is a brief description of the function of each group of pins.  If
+you need much more information than this, you will have to get hold of a
+IIe Technical Reference, or "Understanding the Apple IIe" by Jim Sather.
+I have omitted the signal loading details.  (Most signals can drive two
+LSTTL loads on the card in the auxiliary slot.)
+
+3.58M is the video colour reference signal.
+
+PHI0, 14M, PHI1, Q3 and 7M are the standard system timing signals.
+
+VID7M clocks video dots out of the 74166 parallel to serial shift
+register.
+
+SYNC' is the video horizontal and vertical sync signal.
+
+PRAS' and PCAS' are the multiplexed RAM row and column address strobes.
+
+VC is the third low-roder vertical counter bit.
+
+C07X' is the reset signal for the hand controllers (paddles).
+
+WNDW' is the video non-blank window.
+
+SEGA is the first low-order vertical counter bit
+
+RA0-RA7 is the multiplexed RAM address bus.
+
+ROMEN1 and ROMEN2 are the enable signals for motherboard ROMs.
+
+MD0-MD7 is the internal (unbuffered) data bus.
+
+VID0-VID7 is the video data bus.
+
+CLRGAT' is the colour-burst gating signal.
+
+80VID' enables 80-column display timing.
+
+EN80' enables auxiliary RAM.
+
+ALTVID' is the alternative video output to the video summing amplifier.
+
+SEROUT' is the video serial output from the 74166 parallel-to-serial
+shift register.
+
+ENVID' is normally low; driving this line high disables the character
+generator such that the video dots from the shift register are all high
+(white), and alternative video can be sent out via ALTVID'.
+
++5V and GND are the usual supply rails.
+
+LDPS' is the strobe to the video parallel-to-serial shift reigsetr. This
+signal goes low to load the contents of the video data bus into the
+shift register.
+
+R/W80 is the read/write signal for RAM on the card in this slot.
+
+CASEN' is the column address enable. This signal is disabled (held high)
+during accesses to memory on the card in this slot.
+
+H0 is the low-order horizontal byte counter.
+
+AN3 is the output of annunciator 3.
+
+R/W' is the 65C02 read/write signal.
+
+SEGB is the second low-order vertical counter bit.
+
+FRCTXT' is normally high; pulling this line low enables 14 MHz video
+otuput even when GR is active.
+
+RA9' and RA10' are character generator control signals from the IOU.
+
+GR is the graphics mode enable signal.
+
+ENTMG' is normally low; pulling this line high disables the master
+timing from the PAL device.

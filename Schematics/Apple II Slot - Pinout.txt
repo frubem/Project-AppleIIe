@@ -1,0 +1,120 @@
+The arrow in the middle of the drawing points to the front of the Apple II 
+
+
+
+
+1  I/O SELECT    This line, normall high, will become low when
+                 the microprocessor references page $Cn, where 
+                 n is the individual slot number.  This signal 
+                 becomes active druing 00 and will drive 10 
+                 LSTTL loads*.  This signal is not present on 
+                 peripheral connector 0 (II+)
+
+
+2-17 A0-A15      The buffered address bus.  The address on 
+                 these lines becomes valid during 01 and 
+                 remains valid through 00.  These lines will 
+                 each drive 5 LSTTL loads.
+
+18  R/W          Buffered Read/Write signal.  This becomes 
+                 valid at the same time the address bus does, 
+                 and goes high during a read cycle and low dur-
+                 ing a write.  This line can drive up to 2 LSTTL 
+                 loads *.
+
+19  SYNC         On peripheral connector 7 ONLY, this pin is con-
+                 nected to the video timing generator's SYNC 
+                 signal.
+
+20  I/O STROBE   This line goes low during 00 when the address 
+                 bus contains an address between $C800 and 
+                 $CFFF.  This line will drive 4 LSTTL loads*.
+
+21  RDY          The 6502's RDY input.  Pulling this line low 
+                 during 01 will haldt the microprocessor, with the 
+                 address bus holding the address of the current 
+                 location being fetched
+
+22  DMA          pulling this line low disables the 6502's address 
+                 bus and halts the microprocessor.  This line is 
+                 held high a 3kn resistor to +5v
+
+23  INT OUT      Daisy-chained interrupt output to lower priority 
+                 devices.  This pin is usually connected to pin 28 
+                 (INT IN)
+
+24  DMA OUT      Daisy-chained DMA output to lower priority 
+                 devices.  This pin is usually connected to pin 22 
+                 (DMA IN)
+
+25  +5v          +5 volt power supply.  500mA current is avail-
+                 able for ALL peripheral cards.
+
+26  GND          System electrical ground
+
+27  DMA IN       Daisy-chained DMA input from higher priority 
+                 devices.  Usually connected to pin 24 (DMA 
+                 OUT)
+
+28  INT IN       Daisy-chained interrupt input from higher 
+                 priority devices.  Usually connected to pin 23 
+                 (INT OUT)
+
+29  NMI          Non-Maskable Interrupt.  When this line is 
+                 pulled low the apple begins an interrupt cycle 
+                 and jumps to the interrupt handling routine at 
+                 location $3FB.
+
+30  IRQ          Interrupt ReQuest.  When this line is pulled 
+                 low the Apple begins an interrupt cycle only if 
+                 the 6502's I (Interrupt disable) flag is not set.  
+                 If so, the 6502 will jump to the interrupt han-
+                 dling routine whose address is stored in 
+                 locations $3FE and $3FF
+
+31  RES          When this line is pulled low the microprocessor 
+                 begins a RESET cycle (see page 36)
+
+32  INH          When this line is pulled low, all ROMS on the 
+                 Apple board are disable.  This line is held high 
+                 by a 2kn resistor to +5v
+
+33  -12v         -12 volt power supply.  Maximum current is 
+                 200mA for all peripheral boards.
+
+34  -5v          -5 volt power supply.  Maximum current is 
+                 200mA for all peripheral boards
+
+35  COLOR REF    On peripheral connector 7 ONLY, this pin is con-
+                 nected to the 3.5Mhz COLOR REFerence sig-
+                 nal of the video generator
+
+36  7M           7Mhz clock.  This line will drive 2 LSTTL 
+                 loads*.
+
+37  Q3           2Mhz asymetrical clock.  This line will drive 
+                 2 LSTTL loads*.
+
+38  01           Microprocessor's phase one clock.  This line 
+                 will drive 2 LSTTL loads *.
+
+39  USER1        This line, when pulled low, disables ALL internal 
+                 I/O address decoding**.
+
+40  00           Microprocessors phase zero clock.  This 
+                 line will drive 2 LSTTL loads*.
+
+41  DEVICE       This line becomes active (low) on each peri-
+    SELECT       pheral connector when the address bus is hold-
+                 ing an address between $con) and $C0nF, 
+                 where n is the slot number plus $8.  This line 
+                 will drive 10 LSTTL loads*.
+
+42-49  D0-D7     Buffered bi-directional data bus.  The data on 
+                 this line becomes valid 300nS into 00 on a 
+                 write cycle, and should be stable no less than 
+                 100nS before the end of 00 on a read cycle.  
+                 Each data line can drive one LSTTL load.
+
+50  +12v         +12 volt power supply.  This can supply up to 
+                 250mA total for all peripheral cards.
