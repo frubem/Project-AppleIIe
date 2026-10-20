@@ -27,8 +27,8 @@ architecture while documenting the full hardware development process.
 ## Programs
 Includes AppleSoft BASIC programs and 6502 assembly examples built with the Merlin assembler.
 
-![image](https://github.com/frubem/Project-AppleII/blob/main/Images/image1.jpg)
-![image](https://github.com/frubem/Project-AppleII/blob/main/Images/image2.jpg)
+![image](https://github.com/frubem/Project-AppleIIe/blob/main/Images/image1.jpg)
+![image](https://github.com/frubem/Project-AppleIIe/blob/main/Images/image2.jpg)
 
 
 
