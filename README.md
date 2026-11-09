@@ -14,15 +14,17 @@ architecture while documenting the full hardware development process.
 
 1) Nuova Elettronica DELTA Computer Motherboard: https://github.com/frubem/NE_Delta_Schematics
 2) DELTA Redux Keyboard: https://github.com/frubem/Delta_Redux_KB
-3) DiskII Controller Card: https://github.com/frubem/DiskII
-4) SDisk2 Floppy Drive Emulator: https://github.com/frubem/SDisk2
-5) SmartDisk II Liron Disk Controller: https://github.com/frubem/SmartDiskII
-6) SmartDisk II Floppy Drive Emulator: https://github.com/frubem/AppleIIDiskIIStm32F411
-7) SuperSerial: https://github.com/frubem/SuperSerial
-8) DAN ][ Controller: Apple II Storage Interface, Network Interface, FTP Server: https://github.com/frubem/Apple2Card
-9) MockingBoard2K: https://github.com/frubem/mockingboard2k
-10) Apple ][ joystick Adapter: https://github.com/frubem/Apple2-Joystick-Adapter
-11) A2VGA Audio: https://github.com/frubem/a2vga_audio
+3) Professional Digital Cassette Recorder for 8-bit Machines: https://github.com/frubem/powadcr
+4) DiskII Controller Card: https://github.com/frubem/DiskII
+5) SDisk2 Floppy Drive Emulator: https://github.com/frubem/SDisk2
+6) SmartDisk II Liron Disk Controller: https://github.com/frubem/SmartDiskII
+7) SmartDisk II Floppy Drive Emulator: https://github.com/frubem/AppleIIDiskIIStm32F411
+8) SuperSerial: https://github.com/frubem/SuperSerial
+9) GraphicPlus: https://github.com/frubem/GraphicPlus
+10) DAN ][ Controller: Apple II Storage Interface, Network Interface, FTP Server: https://github.com/frubem/Apple2Card
+11) MockingBoard2K: https://github.com/frubem/mockingboard2k
+12) Apple ][ joystick Adapter: https://github.com/frubem/Apple2-Joystick-Adapter
+13) A2VGA Audio: https://github.com/frubem/a2vga_audio
 
 ## Programs
 Includes AppleSoft BASIC programs and 6502 assembly examples built with the Merlin assembler.
